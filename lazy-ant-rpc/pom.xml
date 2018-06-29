@@ -10,10 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lazy-ant-rpc</artifactId>
+    <packaging>pom</packaging>
 
     <name>lazy-ant-rpc</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
+    <modules>
+        <module>lazy-ant-rpc-api</module>
+        <module>lazy-ant-rpc-ant</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

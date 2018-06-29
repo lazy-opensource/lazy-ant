@@ -10,10 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lazy-ant-register</artifactId>
+    <packaging>pom</packaging>
 
     <name>lazy-ant-register</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
+    <modules>
+        <module>lazy-ant-register-api</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -2,51 +2,23 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lazy-ant-serialization</artifactId>
+        <groupId>com.lazy.ant</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.lazy.ant</groupId>
-    <artifactId>lazy-ant</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
-    <modules>
-        <module>lazy-ant-common</module>
-        <module>lazy-ant-config</module>
-        <module>lazy-ant-rpc</module>
-        <module>lazy-ant-serialization</module>
-        <module>lazy-ant-register</module>
-        <module>lazy-ant-cluster</module>
-        <module>lazy-ant-example</module>
-        <module>lazy-ant-export</module>
-    </modules>
+    <artifactId>lazy-ant-serialization-fastjson</artifactId>
 
-    <name>lazy-ant</name>
+    <name>lazy-ant-serialization-fastjson</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
-    <inceptionYear>2018</inceptionYear>
-    <licenses>
-        <license>
-            <name>Lazy, Version 1.0.0</name>
-            <url>http://www.laizhiyuan.xin</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    <scm>
-        <url>https://github.com/lazy-opensource/lazy-ant</url>
-        <connection>scm:git:https://github.com/lazy-opensource/lazy-ant.git</connection>
-        <developerConnection>scm:git:https://github.com/lazy-opensource/lazy-ant.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-    <developers>
-        <developer>
-            <id>lazy</id>
-            <name>laizhiyuan</name>
-            <email>1059446341@qq.com</email>
-            <url>http://www.laizhiyuan.xin/</url>
-        </developer>
-    </developers>
 
     <properties>
-        <lazy.ant.version>1.0.0-SNAPSHOT</lazy.ant.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -57,18 +29,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.lazy.ant</groupId>
-                <artifactId>lazy-ant-bom</artifactId>
-                <version>${lazy.ant.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

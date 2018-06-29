@@ -10,10 +10,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lazy-ant-serialization</artifactId>
+    <packaging>pom</packaging>
 
     <name>lazy-ant-serialization</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
+    <modules>
+        <module>lazy-ant-serialization-kryo</module>
+        <module>lazy-ant-serialization-jdk</module>
+        <module>lazy-ant-serialization-fastjson</module>
+        <module>lazy-ant-serialization-api</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
