@@ -17,5 +17,15 @@
         <module>lazy-ant-example-provider</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-example-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
 </project>

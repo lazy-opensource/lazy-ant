@@ -9,15 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lazy-ant-register</artifactId>
+    <artifactId>lazy-ant-export</artifactId>
     <packaging>pom</packaging>
 
-    <name>lazy-ant-register</name>
+    <name>lazy-ant-export</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
     <modules>
-        <module>lazy-ant-register-api</module>
-        <module>lazy-ant-register-zookeeper</module>
+        <module>lazy-ant-remoting-api</module>
+        <module>lazy-ant-remoting-netty</module>
     </modules>
 
     <properties>

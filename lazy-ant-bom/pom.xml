@@ -31,6 +31,7 @@
         <logback.version>1.2.2</logback.version>
         <kryo.version>4.0.1</kryo.version>
         <kryo.serializers.version>0.42</kryo.serializers.version>
+        <lazy.ant.version>1.0.0-SNAPSHOT</lazy.ant.version>
     </properties>
 
     <dependencies>
@@ -44,6 +45,76 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-config-api</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-config-spring</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-common</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-cluster</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-serialization-api</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-serialization-jdk</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-serialization-fastjson</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-serialization-kryo</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-rpc-api</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-rpc-ant</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-remoting-api</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-remoting-netty</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-register-api</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lazy.ant</groupId>
+                <artifactId>lazy-ant-register-zookeeper</artifactId>
+                <version>${lazy.ant.version}</version>
+            </dependency>
 
             <!--Spring Libs-->
             <dependency>
@@ -136,4 +207,17 @@
     <build>
 
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>sanitation-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://47.94.226.67:8081/nexus/content/repositories/sanitation-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>sanitation-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://47.94.226.67:8081/nexus/content/repositories/sanitation-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
