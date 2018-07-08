@@ -1,1 +1,1 @@
-http\://lazy.ant/schema/ant=com.lazy.ant.config.spring.schema.LazyAntNamespaceHandler
+http\://lazy.ant.schema/ant=com.lazy.ant.config.spring.schema.LazyAntNamespaceHandler
