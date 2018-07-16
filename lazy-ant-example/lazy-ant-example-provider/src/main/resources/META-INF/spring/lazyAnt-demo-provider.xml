@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:lazyAnt="http://lazy.ant.schema/ant"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://lazy.ant.schema/ant
+       http://lazy.ant.schema/ant/ant.xsd">
+
+    <!-- provider's application name, used for tracing dependency relationship -->
+    <lazyAnt:application name="demo-provider"/>
+
+    <!-- use zookeeper registry center to export service -->
+    <lazyAnt:registry address="47.94.226.67:2181,47.94.226.67:2182,47.94.226.67:2183"/>
+
+    <!-- use dubbo protocol to export service on port 20880 -->
+    <lazyAnt:protocol name="ant" port="20880"/>
+
+    <!-- service implementation, as same as regular local bean -->
+    <bean id="demoService" class="com.lazy.ant.example.provider.HelloServiceImpl"/>
+
+    <!-- declare the service interface to be exported -->
+    <lazyAnt:service interface="com.lazy.ant.example.api.IHelloService" ref="demoService"/>
+
+</beans>

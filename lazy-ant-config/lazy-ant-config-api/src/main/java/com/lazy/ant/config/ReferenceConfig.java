@@ -6,5 +6,5 @@ package com.lazy.ant.config;
  * @author laizhiyuan
  * @date 2018/6/29.
  */
-public class ReferenceConfig {
+public class ReferenceConfig<T> extends AbstractConfig {
 }

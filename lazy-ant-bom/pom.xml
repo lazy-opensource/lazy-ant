@@ -32,15 +32,10 @@
         <kryo.version>4.0.1</kryo.version>
         <kryo.serializers.version>0.42</kryo.serializers.version>
         <lazy.ant.version>1.0.0-SNAPSHOT</lazy.ant.version>
+        <netty5.version>5.0.0.Alpha1</netty5.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -72,17 +67,7 @@
             </dependency>
             <dependency>
                 <groupId>com.lazy.ant</groupId>
-                <artifactId>lazy-ant-serialization-jdk</artifactId>
-                <version>${lazy.ant.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.lazy.ant</groupId>
-                <artifactId>lazy-ant-serialization-fastjson</artifactId>
-                <version>${lazy.ant.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.lazy.ant</groupId>
-                <artifactId>lazy-ant-serialization-kryo</artifactId>
+                <artifactId>lazy-ant-serialization-hessian2</artifactId>
                 <version>${lazy.ant.version}</version>
             </dependency>
             <dependency>
@@ -139,7 +124,7 @@
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
-                <version>${netty4.version}</version>
+                <version>${netty5.version}</version>
             </dependency>
 
             <!--Http Client Libs-->
@@ -200,6 +185,12 @@
                 <groupId>de.javakaffee</groupId>
                 <artifactId>kryo-serializers</artifactId>
                 <version>${kryo.serializers.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>hessian-lite</artifactId>
+                <version>3.2.3</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

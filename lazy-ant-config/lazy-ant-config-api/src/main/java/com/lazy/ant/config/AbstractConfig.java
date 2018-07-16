@@ -12,5 +12,14 @@ import java.io.Serializable;
  */
 public abstract class AbstractConfig implements Serializable {
 
+    protected String id;
 
+    public String getId() {
+        return id;
+    }
+
+    public AbstractConfig setId(String id) {
+        this.id = id;
+        return this;
+    }
 }

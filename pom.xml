@@ -17,6 +17,7 @@
         <module>lazy-ant-cluster</module>
         <module>lazy-ant-remoting</module>
         <module>lazy-ant-example</module>
+        <module>lazy-ant-dependencies</module>
     </modules>
 
     <name>lazy-ant</name>

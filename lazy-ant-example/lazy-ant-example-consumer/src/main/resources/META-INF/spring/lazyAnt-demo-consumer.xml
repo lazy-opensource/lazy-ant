@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:lazyAnt="http://lazy.ant.schema/ant"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://lazy.ant.schema/ant
+       http://lazy.ant.schema/ant/ant.xsd">
+
+    <!-- consumer's application name, used for tracing dependency relationship (not a matching criterion),
+    don't set it same as provider -->
+    <lazyAnt:application name="demo-consumer"/>
+
+    <!-- use multicast registry center to discover service -->
+    <lazyAnt:registry address="47.94.226.67:2181,47.94.226.67:2182,47.94.226.67:2183"/>
+
+    <!-- generate proxy for the remote service, then demoService can be used in the same way as the
+    local regular interface -->
+    <lazyAnt:reference id="demoService"  interface="com.lazy.ant.example.api.IHelloService"/>
+
+</beans>

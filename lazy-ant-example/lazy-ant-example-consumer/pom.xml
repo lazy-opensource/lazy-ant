@@ -42,7 +42,7 @@
         </dependency>
         <dependency>
             <groupId>com.lazy.ant</groupId>
-            <artifactId>lazy-ant-serialization-kryo</artifactId>
+            <artifactId>lazy-ant-serialization-hessian2</artifactId>
         </dependency>
     </dependencies>
 
