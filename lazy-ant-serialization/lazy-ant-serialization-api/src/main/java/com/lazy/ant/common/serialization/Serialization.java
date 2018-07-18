@@ -16,6 +16,8 @@
  */
 package com.lazy.ant.common.serialization;
 
+import com.lazy.ant.common.spi.Spi;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -24,6 +26,7 @@ import java.net.URL;
 /**
  * Serialization. (SPI, Singleton, ThreadSafe)
  */
+@Spi("hessian2")
 public interface Serialization {
 
     /**

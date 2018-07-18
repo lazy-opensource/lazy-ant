@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lazy-ant-all</artifactId>
+    <artifactId>lazy-ant-dependencies</artifactId>
 
     <dependencies>
         <dependency>
