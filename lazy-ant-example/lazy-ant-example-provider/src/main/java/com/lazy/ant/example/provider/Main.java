@@ -1,5 +1,7 @@
 package com.lazy.ant.example.provider;
 
+import com.lazy.ant.common.serialization.Serialization;
+import com.lazy.ant.common.spi.SpiLoader;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
@@ -13,10 +15,12 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                new String[]{"META-INF/spring/lazyAnt-demo-provider.xml"});
-        context.start();
+//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+//                new String[]{"META-INF/spring/lazyAnt-demo-provider.xml"});
+//        context.start();
+//
+//        System.in.read();
 
-        System.in.read();
+        SpiLoader.getSpi(Serialization.class);
     }
 }

@@ -24,6 +24,10 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.lazy.ant</groupId>
+            <artifactId>lazy-ant-common</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
