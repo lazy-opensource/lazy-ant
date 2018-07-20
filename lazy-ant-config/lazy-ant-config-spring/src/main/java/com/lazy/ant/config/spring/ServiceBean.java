@@ -1,8 +1,5 @@
 package com.lazy.ant.config.spring;
 
-import com.lazy.ant.common.serialization.Serialization;
-import com.lazy.ant.common.spi.Spi;
-import com.lazy.ant.common.spi.SpiLoader;
 import com.lazy.ant.config.ServiceConfig;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
@@ -36,7 +33,6 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        SpiLoader.getSpi(Serialization.class);
        export();
     }
 

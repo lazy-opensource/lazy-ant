@@ -2,6 +2,8 @@ package com.lazy.ant.example.provider;
 
 import com.lazy.ant.common.serialization.Serialization;
 import com.lazy.ant.common.spi.SpiLoader;
+import com.lazy.ant.config.ApplicationConfig;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
@@ -21,6 +23,8 @@ public class Main {
 //
 //        System.in.read();
 
-        SpiLoader.getSpi(Serialization.class);
+        ApplicationContext context = new ClassPathXmlApplicationContext();
+
+        SpiLoader.getSpi(Serialization.class, context);
     }
 }

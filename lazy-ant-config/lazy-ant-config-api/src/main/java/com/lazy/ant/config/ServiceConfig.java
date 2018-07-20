@@ -14,6 +14,8 @@ public class ServiceConfig<T> extends AbstractConfig {
 
     protected void export() throws Exception {
         interfaceClass = Class.forName(interfaceName, true, Thread.currentThread().getContextClassLoader());
+        checkRef();
+
     }
 
     private void checkRef() {

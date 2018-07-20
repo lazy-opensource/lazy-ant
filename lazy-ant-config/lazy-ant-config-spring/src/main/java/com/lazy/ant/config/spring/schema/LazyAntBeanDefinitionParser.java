@@ -15,7 +15,9 @@ import java.lang.reflect.Modifier;
 import java.util.regex.Pattern;
 
 /**
- * <p></p>
+ * <p>
+ *     XSD Spring Bean 解析实现
+ * </p>
  *
  * @author laizhiyuan
  * @date 2018/6/29.
